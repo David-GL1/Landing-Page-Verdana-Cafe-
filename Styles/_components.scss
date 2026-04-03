@@ -1,0 +1,259 @@
+@use 'variables' as vars;
+
+// ===== BOTONES =====
+.btn-primary {
+  display: inline-block;
+  background: vars.$green-deep;
+  color: vars.$cream;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-family: vars.$font-body;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background 0.3s, transform 0.2s;
+
+  &:hover {
+    background: vars.$green-soft;
+    color: vars.$cream;
+    transform: translateY(-2px);
+  }
+}
+
+.btn-secondary {
+  display: inline-block;
+  border: 1.5px solid vars.$green-deep;
+  color: vars.$green-deep;
+  padding: 13px 32px;
+  border-radius: 50px;
+  font-family: vars.$font-body;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s;
+
+  &:hover {
+    background: vars.$green-deep;
+    color: vars.$cream;
+  }
+}
+
+.btn-secondary-light {
+  display: inline-block;
+  border: 1.5px solid vars.$cream;
+  color: vars.$cream;
+  padding: 13px 32px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s;
+
+  &:hover {
+    background: vars.$cream;
+    color: vars.$green-deep;
+  }
+}
+
+.btn-nav {
+  background: vars.$green-deep;
+  color: vars.$cream;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.3s;
+
+  &:hover {
+    background: vars.$green-soft;
+  }
+}
+
+// ===== MENU CARD =====
+.menu-card {
+  background: vars.$white;
+  border-radius: vars.$radius-lg;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(vars.$green-deep, 0.07);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: vars.$shadow-lg;
+  }
+
+  &.featured {
+    border: 2px solid vars.$gold;
+  }
+}
+
+.menu-img {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.menu-img img {
+  transition: transform 0.5s;
+}
+
+.menu-card:hover .menu-img img {
+  transform: scale(1.05);
+}
+
+.menu-img--featured {
+  height: 260px;
+}
+
+.menu-info {
+  padding: 20px;
+}
+
+.menu-info h3 {
+  font-family: vars.$font-display;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: vars.$green-deep;
+  margin-bottom: 8px;
+}
+
+.menu-info p {
+  font-size: 0.85rem;
+  color: vars.$text-light;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.menu-price {
+  font-family: vars.$font-display;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: vars.$green-soft;
+}
+
+// ===== REVIEW CARD =====
+.review-card {
+  background: rgba(vars.$white, 0.05);
+  border: 1px solid rgba(vars.$cream, 0.1);
+  border-radius: vars.$radius-lg;
+  padding: 32px;
+  transition: transform 0.3s, background 0.3s;
+
+  &:hover {
+    transform: translateY(-4px);
+    background: rgba(vars.$white, 0.09);
+  }
+
+  &--featured {
+    background: vars.$green-soft;
+    border-color: vars.$green-light;
+  }
+}
+
+.review-stars {
+  color: vars.$gold-light;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.review-card p {
+  font-family: vars.$font-elegant;
+  font-size: 1.05rem;
+  color: rgba(vars.$cream, 0.85);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+// ===== REVIEWER =====
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviewer-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: vars.$green-light;
+  color: vars.$cream;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.reviewer strong {
+  display: block;
+  font-size: 0.9rem;
+  color: vars.$cream;
+}
+
+.reviewer span {
+  font-size: 0.8rem;
+  color: rgba(vars.$cream, 0.5);
+}
+
+// ===== BADGES Y TAGS =====
+.section-tag {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: vars.$green-light;
+  margin-bottom: 16px;
+}
+
+.menu-tag-featured {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: vars.$gold;
+  color: vars.$white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+.floating-badge {
+  position: absolute;
+  top: 52%;
+  left: 44%;
+  background: vars.$white;
+  border-radius: vars.$radius;
+  padding: 14px 18px;
+  box-shadow: vars.$shadow-lg;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 2;
+}
+
+.badge-num {
+  font-family: vars.$font-display;
+  font-size: 2rem;
+  font-weight: 700;
+  color: vars.$green-deep;
+}
+
+.badge-text {
+  font-size: 0.75rem;
+  color: vars.$text-mid;
+  line-height: 1.5;
+}
+
+// ===== ANIMACIONES =====
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,17 @@
+@mixin phones {
+  @media screen and (max-width: 44rem) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (min-width: 44rem) and (max-width: 64rem) {
+    @content;
+  }
+}
+
+@mixin no-hover {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}

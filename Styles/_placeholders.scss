@@ -1,0 +1,33 @@
+@use 'variables' as vars;
+
+%btn-base {
+  display: inline-block;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+%flex-center {
+  display: flex;
+  align-items: center;
+}
+
+%img-absolute {
+  position: absolute;
+  border-radius: vars.$radius-lg;
+  overflow: hidden;
+  box-shadow: vars.$shadow-lg;
+}
+
+%section-title {
+  font-family: vars.$font-display;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+%elegant-text {
+  font-family: vars.$font-elegant;
+  line-height: 1.7;
+}

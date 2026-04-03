@@ -1,0 +1,41 @@
+@use 'variables' as vars;
+
+// ===== RESET =====
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: vars.$font-body;
+  background: vars.$cream;
+  color: vars.$text-dark;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: vars.$green-deep;
+  }
+}
+
+ul {
+  list-style: none;
+}
